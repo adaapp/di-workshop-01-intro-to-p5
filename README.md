@@ -1,4 +1,4 @@
-# Workshop 1: Introducing JavaScipt with P5.js
+# Workshop 1: Introducing JavaScript with P5.js
 
 Make sure you’re working in pairs - on a single laptop. You’ll be **pair programming**. In pair programming, there are two roles - **driver** and **navigator**.
 
