@@ -1,9 +1,27 @@
 var r = 0;
 var g = 0;
 var b = 0;
+var brushSize = 30;
 
 var resetButton = document.getElementById('reset');
 resetButton.onclick = reset;
+
+var subtractBrush = document.getElementById('subtract');
+var addBrush = document.getElementById('add');
+
+subtractBrush.onclick = minusBrush;
+addBrush.onclick = plusBrush;
+
+
+function minusBrush(){
+  brushSize -= 1;
+  document.getElementById('brushSizeVal').textContent = brushSize
+}
+
+function plusBrush(){
+  brushSize += 1;
+  document.getElementById('brushSizeVal').textContent = brushSize
+}
 
 function reset () {
   r = 0;
@@ -23,7 +41,7 @@ function draw() {
  
   fill(r, g, b)
 
-  ellipse(mouseX, mouseY, 30, 30)
+  ellipse(mouseX, mouseY, brushSize, brushSize)
     if (keyIsDown (82)) {
       r += 1;
       if(r > 255){

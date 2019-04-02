@@ -12,3 +12,7 @@ p {
 .greenCol{
     color: green;
 }
+
+.tool{
+    border: 1px solid black;
+}
