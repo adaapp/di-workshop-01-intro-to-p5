@@ -33,7 +33,7 @@ function reset () {
 }
 
 function setup() {
-  createCanvas(600, 600)
+  createCanvas(windowWidth, windowHeight)
   background(0, 0, 0)
 }
 
@@ -42,6 +42,7 @@ function draw() {
   fill(r, g, b)
 
   ellipse(mouseX, mouseY, brushSize, brushSize)
+
     if (keyIsDown (82)) {
       r += 1;
       if(r > 255){
@@ -63,4 +64,9 @@ function draw() {
       }
       document.getElementById('blue').textContent = b;
     }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  background(0);
 }
