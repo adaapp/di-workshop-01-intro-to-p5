@@ -33,7 +33,7 @@ function reset () {
 }
 
 function setup() {
-  createCanvas(600, 600)
+  createCanvas(windowWidth, windowHeight)
   background(0, 0, 0)
 }
 
