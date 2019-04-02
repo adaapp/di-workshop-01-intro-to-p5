@@ -1,3 +1,5 @@
+const defaultBGCol = 0;
+
 var r = 0;
 var g = 0;
 var b = 0;
@@ -34,7 +36,7 @@ function reset () {
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
-  background(0, 0, 0)
+  background(defaultBGCol)
 }
 
 function draw() {
