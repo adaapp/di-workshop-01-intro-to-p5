@@ -69,3 +69,8 @@ function draw() {
 
   ellipse(mouseX, mouseY, brushSize, brushSize)
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  background(0);
+}
