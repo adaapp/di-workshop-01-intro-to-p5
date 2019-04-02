@@ -27,9 +27,11 @@ function keyTyped() {
   if (key === 'r') {
     r += 5;
     document.getElementById('red').textContent = r;
+
   } else if (key === 'g') {
     g += 5;
     document.getElementById('green').textContent = g;
+    
   } else if (key === 'b') {
     b += 5;
     document.getElementById('blue').textContent = b;
