@@ -37,35 +37,30 @@ function setup() {
   background(0, 0, 0)
 }
 
-function keyTyped() {
-  if (key === 'r') {
-    r += 10;
-    if(r > 255){
-      r = 255;
-    }
-    document.getElementById('red').textContent = r;
-
-  } else if (key === 'g') {
-    g += 1;
-    if(g > 255){
-      g = 255;
-    }
-    document.getElementById('green').textContent = g;
-
-  } else if (key === 'b') {
-    b += 1;
-    if(b > 255){
-      b = 255;
-    }
-    document.getElementById('blue').textContent = b;
-  }
-  
-  return false; // prevent default
-}
-
 function draw() {
  
   fill(r, g, b)
 
   ellipse(mouseX, mouseY, brushSize, brushSize)
+    if (keyIsDown (82)) {
+      r += 1;
+      if(r > 255){
+        r = 255;
+      }
+      document.getElementById('red').textContent = r;
+    }
+    if (keyIsDown (71)) {
+      g += 1;
+      if(g > 255){
+        g = 255;
+      }
+      document.getElementById('green').textContent = g;
+    }
+    if (keyIsDown (66)) {
+      b += 1;
+      if(b > 255){
+        b = 255;
+      }
+      document.getElementById('blue').textContent = b;
+    }
 }
