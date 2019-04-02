@@ -1,0 +1,14 @@
+p {
+    display: inline-block;
+    padding: 0px 10px; 
+}
+
+.redCol{
+    color: red;
+}
+.blueCol{
+    color: blue;
+}
+.greenCol{
+    color: green;
+}
