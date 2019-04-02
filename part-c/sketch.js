@@ -1,22 +1,19 @@
 var r = 0;
 var g = 0;
 var b = 0;
-var resetButton = document.getElementById('reset')
 
-resetButton.addEventListener('click', reset(), false);
+var resetButton = document.getElementById('reset');
+resetButton.onclick = reset;
 
 function reset () {
-    if (r>0 )
   r = 0;
-  document.getElementById('red').textContent = r;
-
   g = 0;
-  document.getElementById('green').textContent = g;
-
   b = 0;
+  document.getElementById('red').textContent = r;
+  document.getElementById('green').textContent = g;
   document.getElementById('blue').textContent = b;
-
 }
+
 
 
 
