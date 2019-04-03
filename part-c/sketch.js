@@ -17,13 +17,17 @@ addBrush.onclick = plusBrush;
 
 
 function minusBrush() {
-  brushSize -= 1;
-  document.getElementById('brushSizeVal').textContent = brushSize
+  if(brushSize){
+    brushSize -= 1;
+    document.getElementById('brushSizeVal').textContent = brushSize
+  }
 }
 
 function plusBrush() {
-  brushSize += 1;
-  document.getElementById('brushSizeVal').textContent = brushSize
+  if (brushSize < 200){
+    brushSize += 1;
+    document.getElementById('brushSizeVal').textContent = brushSize
+  }
 }
 
 function reset() {
