@@ -17,17 +17,13 @@ addBrush.onclick = plusBrush;
 
 
 function minusBrush() {
-  if(brushSize){
-    brushSize -= 1;
-    document.getElementById('brushSizeVal').textContent = brushSize
-  }
+  brushSize -= 1;
+  document.getElementById('brushSizeVal').textContent = brushSize
 }
 
 function plusBrush() {
-  if (brushSize < 200){
-    brushSize += 1;
-    document.getElementById('brushSizeVal').textContent = brushSize
-  }
+  brushSize += 1;
+  document.getElementById('brushSizeVal').textContent = brushSize
 }
 
 function reset() {
@@ -42,6 +38,11 @@ function reset() {
 function setup() {
   createCanvas(windowWidth, windowHeight)
   background(defaultBGCol)
+  document.getElementById('colIndicator').style.background = getCurrentColour();
+}
+
+function getCurrentColour() {
+  return(`rgb(${r}, ${g}, ${b})`);
 }
 
 function draw() {
@@ -52,6 +53,7 @@ function draw() {
   }
 
   if (keyIsPressed){
+    document.getElementById('colIndicator').style.background = getCurrentColour();
     switch(key) {
       // RGB to add more of that colour, EFV to subtract
       case 'r':

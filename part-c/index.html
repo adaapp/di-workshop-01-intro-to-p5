@@ -8,10 +8,12 @@
 
 <body>
   
-  <div>
-    <span class="redCol keyPress">Red:<p id="red">0</p></span> 
-    <span class="greenCol keyPress">Green: <p id="green">0</p></span>
-    <span class="blueCol keyPress">Blue: <p id="blue">0</p></span>
+  <div class="margin-1">
+    <p class="redCol keyPress">Red: <span id="red">0</span></p> 
+    <p class="greenCol keyPress">Green: <span id="green">0</span></p>
+    <p class="blueCol keyPress">Blue: <span id="blue">0</span></p>
+
+    <div id="colIndicator"></div>
 
     <button id="reset">Reset</button>
     <button onclick="background(defaultBGCol)">Clean canvas</button>
