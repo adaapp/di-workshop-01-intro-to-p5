@@ -85,7 +85,7 @@ function draw() {
         break;
       case 'v':
         if (b < 255) {
-          b++;
+          b--;
           document.getElementById('blue').textContent = b;
         }
         break;
